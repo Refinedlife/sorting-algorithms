@@ -43,3 +43,4 @@ int main() {
     system("pause");
     return 0;
 }
+/*此函数执行的是从小到大排序*/
