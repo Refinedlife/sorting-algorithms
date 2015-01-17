@@ -1,3 +1,6 @@
+//用vector实现快速排序，排序代码参考了stackoverflow上的代码
+//快速排序是一种很重要的排序算法
+
 #include <iostream>
 #include <cstdlib>
 #include <vector>
