@@ -9,7 +9,6 @@
 再然后，从前往后找比val小的元素a[i]，然后令a[j] = a[i]，赋值。循环此过程，a[i] = a[j] a[j] = a[i]······
 最后，将val，即最初被替换掉的元素 赋给 a[i]，完成分组。接下来，写个递归就OK了。
 
-
 void QuickSort(int a[], int numsize) /*a是整形数组，numsize是元素个数*/
 {
 	int i = 0, j = numsize - 1;
