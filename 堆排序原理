@@ -56,7 +56,7 @@ void HeapAdjust(SqList *L,int s,int m)
 
 
 注：（我的理解）
-《大话数据结构》中关于堆排序的讲解还算不错，但是不看图的话根本理解不了代码啊啊啊啊～T_T，里面的代码是基于它自己提供的struct结构，真的挺抽象的，所以在这里我还是重写一下吧！
+《大话数据结构》中关于堆排序的讲解还算不错，但是不看实例图的话根本理解不了代码啊啊啊啊～T_T，里面的代码是基于它自己提供的struct结构，真的挺抽象的，所以在这里我还是重写一下吧！
 void HeapSort(list L) {
     int i;
     // 将整个序列调整为最大堆
@@ -72,17 +72,17 @@ void HeapSort(list L) {
 
 void HeapAdjust(list L, int target, int amount) {   // target: Node to be adjusted  amount: amount of the nodes
     int temp, index;
-    temp = L.array[target];
+    primary = L.array[target];
     for (index = 2 * target; index < amount; index *= 2) {
         if (index < amount && L.array[index] < L.array[index + 1]) {
             index++;
         }
-        if (temp >= L.array[index]) {
+        if (primary >= L.array[index]) {
             break;
-        } else if (temp < L.array[index]) {
+        } else if (primary < L.array[index]) {
             L.array[target] = L.array[index];
             target = index;
         }
     }
-    L.array[target] = temp;
+    L.array[target] = primary;
 }
